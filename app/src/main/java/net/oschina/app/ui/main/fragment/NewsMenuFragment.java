@@ -1,9 +1,15 @@
 package net.oschina.app.ui.main.fragment;
 
 import android.view.View;
-import android.widget.*;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import com.androidquery.AQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
+import net.oschina.app.AppException;
 import net.oschina.app.R;
 import net.oschina.app.adapter.ListViewNewsAdapter;
+import net.oschina.app.api.ApiClient;
 import net.oschina.app.bean.News;
 import net.oschina.app.bean.NewsList;
 import net.oschina.app.bean.Notice;
@@ -13,17 +19,10 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.androidquery.AQuery;
-import com.androidquery.callback.AjaxCallback;
-import com.androidquery.callback.AjaxStatus;
-import net.oschina.app.AppException;
-import net.oschina.app.api.ApiClient;
-
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @EFragment(R.layout.frame_news_menu)

@@ -1,26 +1,12 @@
 package net.oschina.app.ui.main;
 
-import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.*;
-import android.widget.*;
-import greendroid.widget.MyQuickAction;
-import greendroid.widget.QuickActionGrid;
-import greendroid.widget.QuickActionWidget;
-import greendroid.widget.QuickActionWidget.OnQuickActionClickListener;
 import net.oschina.app.AppContext;
 import net.oschina.app.R;
-import net.oschina.app.bean.ActiveList;
-import net.oschina.app.bean.NewsList;
-import net.oschina.app.bean.PostList;
-import net.oschina.app.bean.TweetList;
-import net.oschina.app.common.UIHelper;
-import net.oschina.app.ui.main.fragment.*;
-import net.oschina.app.widget.BadgeView;
-import org.androidannotations.annotations.*;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.App;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.FragmentById;
 
 /**
  * 应用程序首页
@@ -35,7 +21,6 @@ public class Main extends FragmentActivity {
 
     @App
     public AppContext appContext;
-
 
     @FragmentById(R.id.fragment_header_tab)
     MainHeaderFragment fragmentHeaderTab;
