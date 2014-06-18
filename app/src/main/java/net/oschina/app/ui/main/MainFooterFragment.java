@@ -8,13 +8,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.*;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import greendroid.widget.MyQuickAction;
 import greendroid.widget.QuickActionGrid;
 import greendroid.widget.QuickActionWidget;
 import net.oschina.app.R;
 import net.oschina.app.common.UIHelper;
-import net.oschina.app.ui.main.fragment.*;
+import net.oschina.app.ui.main.fragment.AbstractMenuFragment;
+import net.oschina.app.ui.main.fragment.NewsMenuFragment_;
+import net.oschina.app.ui.main.fragment.QuestionMenuFragment_;
+import net.oschina.app.ui.main.fragment.TweetMenuFragment_;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
@@ -52,8 +56,10 @@ public class MainFooterFragment extends Fragment {
     protected void calledAfterViewInjection() {
         this.initQuickActionGrid();
         this.mCurSel = -1;
+    }
 
-//        this.setButtonClickEvent(fbNews, 0);
+    public void initNewsPanel() {
+        this.setButtonClickEvent(fbNews, 0);
     }
 
     @Click(R.id.main_footbar_news)

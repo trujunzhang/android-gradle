@@ -30,7 +30,7 @@ public class Main extends FragmentActivity {
 
     @AfterViews
     protected void calledAfterViewInjection() {
-
+        fragmentFooterTab.initNewsPanel();
     }
 
     public void setHeaderTitle(int index) {
