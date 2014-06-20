@@ -1,49 +1,5 @@
 package net.oschina.app;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InvalidClassException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.net.URLEncoder;
-import java.util.Hashtable;
-import java.util.Properties;
-import java.util.UUID;
-
-import net.oschina.app.api.ApiClient;
-import net.oschina.app.bean.ActiveList;
-import net.oschina.app.bean.Blog;
-import net.oschina.app.bean.BlogCommentList;
-import net.oschina.app.bean.BlogList;
-import net.oschina.app.bean.CommentList;
-import net.oschina.app.bean.FavoriteList;
-import net.oschina.app.bean.FriendList;
-import net.oschina.app.bean.MessageList;
-import net.oschina.app.bean.MyInformation;
-import net.oschina.app.bean.News;
-import net.oschina.app.bean.NewsList;
-import net.oschina.app.bean.Notice;
-import net.oschina.app.bean.Post;
-import net.oschina.app.bean.PostList;
-import net.oschina.app.bean.Result;
-import net.oschina.app.bean.SearchList;
-import net.oschina.app.bean.Software;
-import net.oschina.app.bean.SoftwareCatalogList;
-import net.oschina.app.bean.SoftwareList;
-import net.oschina.app.bean.Tweet;
-import net.oschina.app.bean.TweetList;
-import net.oschina.app.bean.User;
-import net.oschina.app.bean.UserInformation;
-import net.oschina.app.common.CyptoUtils;
-import net.oschina.app.common.FileUtils;
-import net.oschina.app.common.ImageUtils;
-import net.oschina.app.common.MethodsCompat;
-import net.oschina.app.common.StringUtils;
-import net.oschina.app.common.UIHelper;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -55,7 +11,16 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
+import net.oschina.app.api.ApiClient;
+import net.oschina.app.bean.*;
+import net.oschina.app.common.*;
 import org.androidannotations.annotations.EApplication;
+
+import java.io.*;
+import java.net.URLEncoder;
+import java.util.Hashtable;
+import java.util.Properties;
+import java.util.UUID;
 //import android.webkit.CacheManager;
 
 /**
